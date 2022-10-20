@@ -1,0 +1,57 @@
+html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
+}
+
+#canvas {
+  border: 1px solid black;
+  margin: 10px;
+  display: none;
+}
+
+.results {
+  max-width: 1440px;
+  margin: 20px auto;
+
+  @media (max-width: 1480px) {
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  table {
+
+  }
+
+  tr {
+
+  }
+
+  tr[data-rank] {
+    cursor: pointer;
+  }
+
+  th, td {
+
+  }
+
+  th {
+
+  }
+
+  td {
+
+  }
+}
+
+.preview {
+
+}
