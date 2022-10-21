@@ -73,6 +73,33 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
+    },
+    "\/LICENSE" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/LICENSE",
+      "oF" : 0
+    },
+    "\/README.md" : {
+      "cB" : 0,
+      "cS" : 0,
+      "eF" : 1,
+      "eL" : 1,
+      "ema" : 1,
+      "eSQ" : 1,
+      "ft" : 4096,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/README.html",
+      "oF" : 1,
+      "oFM" : 0,
+      "oS" : 0,
+      "pHT" : 0,
+      "pME" : 1,
+      "rFN" : 0,
+      "uCM" : 0
     }
   },
   "hooks" : [
@@ -83,7 +110,7 @@
   },
   "projectAttributes" : {
     "creationDate" : 687902652.44562495,
-    "displayValue" : "font differences",
+    "displayValue" : "fontcompare",
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "brackets-rose",
     "iconImageWasSetByUser" : 0

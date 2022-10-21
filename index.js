@@ -1,5 +1,5 @@
-const font1 = 'Rodenh Bold';
-const font2 = 'Rodenh Interpolated Bold';
+const font1 = 'Helvetica';
+const font2 = 'Arial';
 
 class FontCompare {
   constructor(font1, font2) {
@@ -39,7 +39,7 @@ class FontCompare {
 
   init() {
     this.rankDifferences(
-      'ABCDEFGHIJKLMNOPQRSTUVWXYZBabcdefghijklmnopqrstuvwxyz1234567890'
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890'
     );
   }
 
