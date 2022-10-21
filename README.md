@@ -12,8 +12,10 @@ It's the number of pixels in the difference. Draw one letter, draw the other let
 
 - UI for font names and string
 - Better layout/appearance
-- Calculate differences by percentage rather than absolute quantity of pixels
-	- Plan is to do the percentage by counting `[pixels in the diff] / [pixels of the union of the two characters]`
+- Calculate differences by percentage rather than absolute quantity of pixels. Plan is to calculate it as
+
+    ```[pixels in the diff] / [pixels in the union of the two characters]```
+
 - Normalize by width/height of a given character
 - Customizable preview colors
 - Trim images instead of always using the entire canvas
