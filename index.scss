@@ -31,3 +31,13 @@ body {
     cursor: pointer;
   }
 }
+
+.preview {
+  canvas {
+    border: 1px solid black;
+  }
+}
+
+label.color {
+  display: none;
+}
