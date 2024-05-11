@@ -1,0 +1,2 @@
+export default class RenderedString{constructor(t,a,e,i){this.string=t,this.font=a;const h=Math.floor(e),r=Math.floor(1.5*e),s=i.canvas;return i.font=`${this.fontSize}px ${a}`,i.fillText(str,h,r),this.fullImageData=i.getImageData(0,0,s.width,s.height),this.trimImageData(this.fullImageData),this}trimImageData(t){t.reduce(((t,a)=>{t[t.length-1].length}),[[]])}}
+//# sourceMappingURL=Glyph-min.js.map

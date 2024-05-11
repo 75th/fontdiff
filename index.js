@@ -14,6 +14,8 @@ class FontCompare {
     this.fillColor = '#000';
     this.fontSize = 500;
 
+    this.images = new Map();
+
     // List of canvas elements in use.
     this.canvases = new Map([
       ['working', document.createElement('canvas')],
@@ -89,7 +91,7 @@ class FontCompare {
     this.font2 = this.font2input.value;
 
     this.rankDifferences(
-      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890'
+      this.getCharacters();
     ).then(() => {
       this.restorePreview();
       document.querySelector(`[data-rank='1']`).click();
@@ -105,6 +107,10 @@ class FontCompare {
     }
   }
 
+  getCharacters(chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890') {
+    return chars.split('').filter((char, i) => chars.indexOf(char) === i);
+  }
+
   /**
    * Event handler for font selection.
    */
@@ -112,25 +118,6 @@ class FontCompare {
     window.clearTimeout(this.timeout);
 
     this.timeout = window.setTimeout(this.init.bind(this), 1000);
-  }
-
-  /**
-   * Swap the selected fonts.
-   *
-   * @todo Does not work!
-   */
-  swapFonts() {
-    const originalFont1 = this.font1input.value;
-    const originalFont2 = this.font2input.value;
-    const length = this.results.length;
-    this.font1input.value = originalFont2;
-    this.font2input.value = originalFont1;
-
-    for (let i = 0; i < length; i++) {
-      this.results[i].images.reverse();
-    }
-
-    this.restorePreview();
   }
 
   /**
@@ -208,6 +195,10 @@ class FontCompare {
     const c = this.contexts.get('working');
   }
 
+  async generateImage(str, font) {
+    this.renderString(str, )
+  }
+
   /**
    * Calculate a string's difference between two fonts.
    * @param {string} char String whose difference to calculate.
@@ -254,7 +245,7 @@ class FontCompare {
   async rankDifferences(chars) {
     // Calculate the font differences for every character...
     const results = await Promise.all(
-      chars.split('').map((char) => this.calculateDifference(char))
+      chars.map((char) => this.calculateDifference(char))
     );
 
     // ...then sort them by difference level from highest to lowest, and
@@ -304,6 +295,7 @@ class FontCompare {
   }
 
   /**
+   * Display the preview whenever a table row is clicked.
    *
    * @param {MouseEvent} e Click event being handled.
    * @returns {void}
